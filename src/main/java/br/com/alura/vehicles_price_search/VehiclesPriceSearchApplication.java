@@ -1,10 +1,11 @@
-package br.com.alura.vehicles_price_search.models;
+package br.com.alura.vehicles_price_search;
 
-import br.com.alura.vehicles_price_search.services.GetJsonFromURL;
+import br.com.alura.vehicles_price_search.main.Main;
+import br.com.alura.vehicles_price_search.models.InterativeMenu;
+import br.com.alura.vehicles_price_search.services.JsonFromURL;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.json.JsonParser;
 
 @SpringBootApplication
 public class VehiclesPriceSearchApplication implements CommandLineRunner {
@@ -15,13 +16,8 @@ public class VehiclesPriceSearchApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        Main main = new Main();
 
-        GetJsonFromURL JsonFromUrl = new GetJsonFromURL();
-        System.out.println("hello world");
-
-        String json = JsonFromUrl.getJsonFromURL("https://parallelum.com.br/fipe/api/v1/carros/marcas");
-        System.out.println(json);
-
-
+        main.test();
     }
 }

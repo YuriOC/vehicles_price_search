@@ -6,7 +6,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class GetJsonFromURL {
+public class JsonFromURL {
 
     public String getJsonFromURL(String url) {
         HttpClient client = HttpClient.newHttpClient();
