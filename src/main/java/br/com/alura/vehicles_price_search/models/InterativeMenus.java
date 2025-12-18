@@ -49,4 +49,32 @@ public class InterativeMenus {
             return SecondOption;
         }
     }
+
+    public String ShowThirdMenu(){
+        var ThirdMenu = """
+                Type a car's code:""";
+        System.out.println(ThirdMenu);
+
+        var ThirdOption = reader.nextLine();
+
+        if(ThirdOption.isEmpty()){
+            throw new InvalidInputException("You must type a valid number");
+        } else {
+            return ThirdOption;
+        }
+    }
+
+    public String ShowFourthMenu(){
+        var FourthMenu = """
+                Type a model's code:""";
+        System.out.println(FourthMenu);
+
+        var FourthOption = reader.nextLine();
+
+        if(FourthOption.isEmpty()){
+            throw new InvalidInputException("You must type a valid number");
+        } else {
+            return FourthOption;
+        }
+    }
 }

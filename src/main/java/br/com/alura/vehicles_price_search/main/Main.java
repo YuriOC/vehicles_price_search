@@ -28,6 +28,26 @@ public class Main {
         } catch (InvalidInputException e) {
             throw new InvalidInputException("invalid code 2");
         }
+
+        String thirdInput = menu.ShowThirdMenu();
+
+        try{
+            String json = jsonFromURL.getJsonFromURL(BASE_URL + firstInput + "/marcas/" + secondInput + "/modelos/" +
+                    thirdInput + "/anos");
+            System.out.println(json);
+        } catch (InvalidInputException e) {
+            throw new InvalidInputException("invalid code 3");
+        }
+
+        String fourthInput = menu.ShowFourthMenu();
+
+        try{
+            String json = jsonFromURL.getJsonFromURL(BASE_URL + firstInput + "/marcas/" + secondInput + "/modelos/" +
+                    thirdInput + "/anos/" + fourthInput);
+            System.out.println(json);
+        } catch (InvalidInputException e) {
+            throw new InvalidInputException("invalid code 4");
+        }
     }
 
 }
