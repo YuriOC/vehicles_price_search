@@ -9,7 +9,7 @@ public class InterativeMenus {
 
     public String ShowFirstMenu(){
         var FirstMenu = """
-                ##### VEHICLE PRICE SEARCH #####
+                \n##### VEHICLE PRICE SEARCH #####
                 
                 --- OPTIONS ---
                 
@@ -38,7 +38,7 @@ public class InterativeMenus {
 
     public String ShowSecondMenu(){
         var SecondMenu = """
-                Type your company's code choice:""";
+                \nType your company's code choice:""";
         System.out.println(SecondMenu);
 
         var SecondOption = reader.nextLine();
@@ -52,7 +52,7 @@ public class InterativeMenus {
 
     public String ShowThirdMenu(){
         var ThirdMenu = """
-                Type a car's code:""";
+                \nType a car's code:""";
         System.out.println(ThirdMenu);
 
         var ThirdOption = reader.nextLine();
@@ -61,20 +61,6 @@ public class InterativeMenus {
             throw new InvalidInputException("You must type a valid number");
         } else {
             return ThirdOption;
-        }
-    }
-
-    public String ShowFourthMenu(){
-        var FourthMenu = """
-                Type a model's code:""";
-        System.out.println(FourthMenu);
-
-        var FourthOption = reader.nextLine();
-
-        if(FourthOption.isEmpty()){
-            throw new InvalidInputException("You must type a valid number");
-        } else {
-            return FourthOption;
         }
     }
 }
